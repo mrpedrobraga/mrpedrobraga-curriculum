@@ -143,7 +143,6 @@ div.project-icon {
     height: 65px;
     aspect-ratio: 1;
     border-radius: 4px;
-    opacity: 50%;
 }
 
 div.work {
@@ -176,11 +175,18 @@ div.work {
     background-image: url("./assets/distortionator_icon.png");
     background-size: cover;
     image-rendering: pixelated;
+    opacity: 50%;
+}
+
+#ui-composer {
+    background-image: url("./assets/ui_composer_icon.png");
+    background-size: cover;
 }
 
 #rust {
     background-image: url("./assets/rust-icon.png");
     background-size: cover;
+    opacity: 50%;
 }
 
 #profile-picture {
