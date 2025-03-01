@@ -1,0 +1,203 @@
+*,
+:root {
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    border: none;
+    outline: none;
+    color: inherit;
+    background: inherit;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+}
+
+@media only screen {
+    html {
+        padding: 2rem !important;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: #dedede !important;
+    }
+
+    body {
+        width: 210mm;
+        padding: 2rem;
+        box-shadow: 8px 8px 16px #acacac;
+    }
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    text-wrap: nowrap;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 16px;
+    font-weight: 600;
+    text-wrap: nowrap;
+}
+
+div {
+    display: flex;
+
+    &.grid {
+        display: grid;
+        columns: 6;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        margin-block: 1rem;
+    }
+
+    &.h {
+        flex-direction: row;
+    }
+
+    &.v {
+        flex-direction: column;
+    }
+
+    &.greedy {
+        flex-grow: 1;
+    }
+
+    &.gap-big {
+        gap: 1rem;
+    }
+
+    &.gap-small {
+        gap: 0.5rem;
+    }
+}
+
+div.skill {
+    flex-direction: row;
+    align-items: center;
+    place-self: end;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    width: fit-content;
+}
+
+div.progress {
+    display: block;
+    width: 64px;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+div.progress-bar {
+    display: block;
+    background-color: #888;
+    height: 100%;
+}
+
+div.progress-bar.good {
+    background-color: #ac5;
+}
+
+div.progress-bar.golden {
+    background-color: #da5;
+}
+
+div.progress-bar.red {
+    background-color: #d00;
+}
+
+div.works {
+    margin-block: 1rem;
+}
+
+div.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+a.project {
+    text-decoration: none;
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    width: 300px;
+}
+
+div.project-icon {
+    height: 65px;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    opacity: 50%;
+}
+
+div.work {
+    padding: 0.5rem;
+    padding-inline-start: 1rem;
+    background: #f9f9f9;
+
+    &:nth-child(odd) {
+        background: #eaeaea;
+    }
+
+    & .where {
+        color: inherit;
+    }
+
+    & .as-what {
+        flex-grow: 1;
+        font-weight: 500;
+        opacity: 70%;
+    }
+
+    & .when {
+        font-weight: 400;
+        opacity: 70%;
+        font-style: italic;
+    }
+}
+
+#distortionator {
+    background-image: url("./assets/distortionator_icon.png");
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+#rust {
+    background-image: url("./assets/rust-icon.png");
+    background-size: cover;
+}
+
+#profile-picture {
+    width: 96px;
+    height: 96px;
+    aspect-ratio: 1;
+    background-image: url("./assets/me.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+html {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
