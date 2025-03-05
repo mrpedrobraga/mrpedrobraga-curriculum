@@ -14,7 +14,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: #fff;
+    background-color: #fefefd;
+    color: #222222;
 }
 
 @media only screen {
@@ -30,7 +31,7 @@ body {
 
     body {
         width: 210mm;
-        padding: 2rem;
+        padding: 3rem;
         box-shadow: 8px 8px 16px #acacac;
     }
 }
@@ -59,7 +60,7 @@ div {
         columns: 6;
         grid-template-columns: repeat(5, 1fr);
         align-items: center;
-        margin-block: 1rem;
+        margin-block-end: 1rem;
     }
 
     &.h {
@@ -75,7 +76,7 @@ div {
     }
 
     &.gap-big {
-        gap: 1rem;
+        gap: 2rem;
     }
 
     &.gap-small {
@@ -107,8 +108,12 @@ div.progress-bar {
     height: 100%;
 }
 
+.color-1 {
+    color: #256;
+}
+
 div.progress-bar.good {
-    background-color: #ac5;
+    background-color: #3bd;
 }
 
 div.progress-bar.golden {
@@ -128,15 +133,21 @@ div.projects {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    padding-block: 2rem;
 }
 
-a.project {
+div.project {
     text-decoration: none;
     width: fit-content;
     display: flex;
     gap: 1rem;
     flex-direction: row;
-    width: 300px;
+    width: 500px;
+    padding: 1rem;
+
+    &:hover {
+        background-color: #eaeaea;
+    }
 }
 
 div.project-icon {
@@ -146,28 +157,30 @@ div.project-icon {
 }
 
 div.work {
-    padding: 0.5rem;
+    padding: 1rem;
     padding-inline-start: 1rem;
     background: #f9f9f9;
 
     &:nth-child(odd) {
-        background: #eaeaea;
+        background: #eaecef;
     }
 
     & .where {
-        color: inherit;
+        color: #07a;
     }
 
     & .as-what {
         flex-grow: 1;
         font-weight: 500;
         opacity: 70%;
+        color: #206688;
     }
 
     & .when {
         font-weight: 400;
         opacity: 70%;
         font-style: italic;
+        color: #204466;
     }
 }
 
@@ -206,4 +219,8 @@ html {
     font-family: "Archivo Black", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.page-break {
+    break-after: always;
 }
